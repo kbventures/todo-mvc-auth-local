@@ -13,7 +13,7 @@ module.exports = {
       todoItems.sort(function (a, b) {
         // Turn your strings into dates, and then subtract them
         // to get a value that is either negative, positive, or zero.
-        return new Date(b.deadline) - new Date(a.deadline);
+        return new Date(a.deadline) - new Date(b.deadline);
       });
       res.render('todos.ejs', {
         todos: todoItems,
